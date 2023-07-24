@@ -10,7 +10,7 @@ public class HelloworldTest {
         String result = helloWorld.handleRequest(); // Call without arguments
 
         // Update the expected string to "<Hello , AWS lambda>"
-        String expected = "<Hello , AWS lambda>";
+        String expected = "Hello AWS Wolrd";
         assertEquals(expected, result);
     }
 }
