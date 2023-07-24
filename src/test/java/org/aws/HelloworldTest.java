@@ -1,14 +1,15 @@
 package org.aws;
-
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-class HelloworldTest {
-
+public class HelloworldTest {
     @Test
-    void handleRequest() {
-        var sut =new Helloworld();
-        assertEquals("Hello , AWS lambda", sut.handleRequest());
+    public void handleRequest() {
+        Helloworld helloWorld = new Helloworld();
+        String result = helloWorld.handleRequest(null, null);
+
+        // Update the expected string to "<Hello , AWS lambda>"
+        String expected = "<Hello , AWS lambda>";
+        assertEquals(expected, result);
     }
 }
